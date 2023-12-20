@@ -49,7 +49,7 @@ By saving your logic in an abstraction, you can create modules that can be used 
 
 3. In the Max patch you are using, create an object called br.delay.pitch.abs.1.0 
 
-4. Alternatively, you could also create this inside of a bpatcher object and use all of the preset UI objects that are featured inside of the object. To do this, create a bpatcher object. Then, go inside of its inspector, select "choose" next to "Patcher File" and select the br.delay.pitch.maxpat located within the same folder as your prject. 
+4. Alternatively, you could also create this inside of a bpatcher object and use all of the preset UI objects that are featured inside of the object. To do this, create a bpatcher object. Then, go inside of its inspector, select "choose" next to "Patcher File" and select the br.delay.pitch.maxpat located within the same folder as your project. 
 
 
 ## <a name="Use"></a>How To Use
