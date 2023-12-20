@@ -20,15 +20,15 @@ These files were created with Max/MSP version 8.5.6.
 
 ## <a name="About"></a>About
 
-This is a delay-based Max/MSP abstraction, and Ableton Max for Live device that introduces a pitchshifter in the delay line. A low pass and high pass filter is included to prevent extreme build up of high and low frequencies within the feedback line. 
+This is a delay-based Max/MSP abstraction, and Ableton Max for Live device that introduces a pitch-shifter in the delay line. A low pass and high pass filter is included to prevent extreme build up of high and low frequencies within the feedback line. 
 
 Only works as an abstraction or a device. External objects and RNBO not available yet.  
 
 **On/Off:** Turn the effect on or bypass
   
-**Pitchshift:** Pitchshift Factor in steps. -24. to 24. Default 0. Microtonal pitchshifting is possible by using numbers in between integers. For example, -0.50 is pitchshifted down by a quarter tone. This portion of the effect introduces a latency of 2048 samples. 
+**Pitchshift:** Pitch-shift Factor in steps. -24. to 24. Default 0. Microtonal pitch-shifting is possible by using numbers in between integers. For example, -0.50 is pitch-shifted down by a quarter tone. This portion of the effect introduces a latency of 2048 samples. 
 
-**Delay Time:** Delay time in ms. Between 0. and 1000 ms. It is important to note that the lowest possible delay time is actually the signal vector size in samples. For example, if the vector size is set to 256 samples (Which is approximately 5.8 ms at 44,100 sample rate) combined with the latency of the pitchshifter  (Which is approximately 46.43 at 44,100 sample rate) then the shortest delay would be approximately 52.23 ms. Regardless of the perscribed ms delay time, this will be the resulting minimum delay. If the delay time is set to be above 5.8 ms, then the delay time will be the perscribed time plusthe latency of the pitchshifter. 
+**Delay Time:** Delay time in ms. Between 0. and 1000 ms. It is important to note that the lowest possible delay time is actually the signal vector size in samples. For example, if the vector size is set to 256 samples (Which is approximately 5.8 ms at 44,100 sample rate) combined with the latency of the pitch-shifter  (Which is approximately 46.43 at 44,100 sample rate) then the shortest delay would be approximately 52.23 ms. Regardless of the perscribed ms delay time, this will be the resulting minimum delay. If the delay time is set to be above 5.8 ms, then the delay time will be the perscribed time plusthe latency of the pitch-shifter. 
   
 **Feedback:** The amount of signal that is fed back into the delay line. The range is between 0 and 0.99 
 
@@ -49,7 +49,7 @@ By saving your logic in an abstraction, you can create modules that can be used 
 
 3. In the Max patch you are using, create an object called br.delay.pitch.abs.1.0 
 
-4. Alternatively, you could also create this inside of a bpatcher object and use all of the preset UI objects that are featured inside of the object. To do this, create a bpatcher object. Then, go inside of its inspector, select "choose" next to "Patcher File" and select the br.delay.pitch.maxpat located within the same folder as your project. 
+4. Alternatively, you could also create this inside of a bpatcher object and use all of the preset UI objects featured inside the abstraction. To do this, create a bpatcher object. Then, go inside of its inspector, select "choose" next to "Patcher File" and select the br.delay.pitch.maxpat located within the same folder as your project. 
 
 
 ## <a name="Use"></a>How To Use
@@ -58,9 +58,9 @@ The first two inlets are for the left and the right stereo signals.
 
 The 3rd inlet turns the effect on, or bypasses the signal. It takes an integer of 0 or 1. The default is 1. 
 
-The 4rd inlet is the Pitchshift Factor in steps. -24. to 24. Default 0. Microtonal pitchshifting is possible by using numbers in between integers. For example, -0.50 is pitchshifted down by a quarter tone. 
+The 4rd inlet is the Pitch-shift Factor in steps. -24. to 24. Default 0. Microtonal pitch-shifting is possible by using numbers in between integers. For example, -0.50 is pitch-shifted down by a quarter tone. 
 
-The 5th inlet is the delay time in ms. It takes a float between 0. and 1000. The default is 100 ms. Please see note above about latency within the patch regarding the pitchshift and minimum delay time. 
+The 5th inlet is the delay time in ms. It takes a float between 0. and 1000. The default is 100 ms. Please see note above about latency within the patch regarding the pitch-shift and minimum delay time. 
 
 The 6th inlet is the feedback. It takes a float between 0. and 0.99. 
 
